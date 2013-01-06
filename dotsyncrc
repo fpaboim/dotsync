@@ -1,0 +1,56 @@
+#
+# dotsync : https://github.com/dotphiles/dotsync
+#
+# Config for dotsync
+#
+
+# Location of your dotfiles in $HOME
+# DOTFILES=.dotfiles
+
+# dotfiles to symlink
+#
+# srcfile:dstfile
+# dstfile will be '.$srcfile' by default (with path removed)
+#
+[files]
+dotsyncrc
+bashrc
+gitignore
+vimrc
+zshrc
+aliases
+#bash_logout
+#bash_profile
+#bin:bin
+#dir_colors
+#gitconfig
+#inputrc
+#irssi
+#muttrc
+#procmailrc
+#profile
+#pythonrc.py
+#rpmmacros
+#screenrc
+#ssh
+#subversion
+#toprc
+#vim
+#zlogout
+#zprofile
+#zsh
+[endfiles]
+
+## hostname                     type=masterhost, ANY or NONE
+[hosts]
+vbox73                           git=ANY                 #git repo, pull from anywhere
+#host2.example.com               git=ANY                 #git repo, pull from anywhere
+#host3.example.com               git=ANY                 #git repo, pull from anywhere
+#host4.example.com               git=host5.example.com   #git repo, pull from host5
+#host5.example.com               git=NONE                #git repo, local only
+#host6.example.net               rsync=host1.example.com #rsync mirror, push from host1
+#host7.example.net               rsync=host2.example.com #rsync mirror, push from host2
+#host8.example.net               rsync=host2.example.com #rsync mirror, push from host2
+#host9.example.net               rsync=host2.example.com #rsync mirror, push from host2
+[endhosts]
+

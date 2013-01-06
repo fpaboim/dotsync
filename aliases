@@ -1,0 +1,9 @@
+# aliases
+alias ll='ls -AlFh --group-directories-first'
+alias la='ls -FAh --group-directories-first'
+alias l='ls -1F --group-directories-first'
+alias dusz='du --max-depth=1|sort -n'
+alias dusz.='find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -sc | sort -n'
+alias lsfind='ls -R | grep  -i'
+alias dotsync='~/.dotfiles/bin/dotsync'
+
