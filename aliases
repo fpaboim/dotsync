@@ -1,7 +1,14 @@
 # aliases
-alias ll='ls -AlFh --group-directories-first'
-alias la='ls -FAh --group-directories-first'
-alias l='ls -1F --group-directories-first'
+if [ "$TERM" == "cygwin" ]; then
+  alias ll='ls -AlFh'
+  alias la='ls -FAh'
+  alias l='ls -1F'
+else
+  alias ll='ls -AlFh --group-directories-first'
+  alias la='ls -FAh --group-directories-first'
+  alias l='ls -1F --group-directories-first'
+fi
+
 alias dusz='du --max-depth=1|sort -n'
 alias dusz.='find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -sc | sort -n'
 alias lsfind='ls -R | grep  -i'

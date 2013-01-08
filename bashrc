@@ -7,10 +7,12 @@ alias djanman='python manage.py'
 source "$HOME/.rvm/scripts/rvm"
 
 # ctrl-s save fix
-stty ixany
-stty ixoff -ixon
-stty stop undef
-stty start undef
+if [ "$TERM" != "cygwin" ]; then
+  stty ixany
+  stty ixoff -ixon
+  stty stop undef
+  stty start undef
+fi
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[00;33m\]\u\[\033[00m\]@\[\033[01;32m\]\w\[\033[00m\]\$'
 
