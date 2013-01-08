@@ -14,7 +14,7 @@ if [ "$TERM" != "cygwin" ]; then
   stty start undef
 fi
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[00;33m\]\u\[\033[00m\]@\[\033[01;32m\]\w\[\033[00m\]\$'
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\e[1;34m@\[\033[01;32m\]\w\[\033[00m\]\e[0;32m$(__git_ps1 "(%s)")\e[1;31m\$\e[m'
 
 # Aliases
 source ~/.aliases
