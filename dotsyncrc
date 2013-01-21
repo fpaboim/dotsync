@@ -44,7 +44,7 @@ aliases
 ## hostname                     type=masterhost, ANY or NONE
 [hosts]
 vbox73                           git=ANY                 #git repo, pull from anywhere
-#host2.example.com               git=ANY                 #git repo, pull from anywhere
+msysgit_laptop                   git=ANY                 #git repo, pull from anywhere
 #host3.example.com               git=ANY                 #git repo, pull from anywhere
 #host4.example.com               git=host5.example.com   #git repo, pull from host5
 #host5.example.com               git=NONE                #git repo, local only
