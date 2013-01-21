@@ -16,6 +16,7 @@
 dotsyncrc
 bashrc
 gitignore
+gitignore_global
 vimrc
 zshrc
 aliases
