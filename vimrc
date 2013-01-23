@@ -1,3 +1,4 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
@@ -52,6 +53,7 @@ endif
 syntax on
 au Bufenter *.hs compiler ghc
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY BINDINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap red edit <c-r>=expand("%:h")<cr>
@@ -95,6 +97,7 @@ nnoremap Y y$
 vnoremap < <gv
 vnoremap > >gv
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUXILIARY FUNCTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! NumberToggle()
@@ -106,10 +109,12 @@ function! NumberToggle()
 endfunc
 map <F8> :call NumberToggle()<cr> 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Aliases
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 command!  Nt :call NumberToggle()<cr> 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Callbacks
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufLeave,FocusLost * :set number
@@ -117,6 +122,7 @@ autocmd BufEnter,FocusGained * :set relativenumber
 autocmd InsertEnter * :set number | :set nocul 
 autocmd InsertLeave * :set relativenumber | :set cul
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
@@ -142,9 +148,11 @@ Bundle 'vim-scripts/ScrollColors'
 Bundle 'vim-scripts/SearchComplete'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'xolox/vim-session'
+Bundle 'leafo/moonscript-vim'
 Bundle 'Colour-Sampler-Pack'
 filetype plugin indent on
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme Mustang
@@ -155,6 +163,7 @@ highlight LineNr ctermfg=lightgrey
 highlight Tb_Changed ctermfg=red
 highlight Tb_VisibleNormal ctermfg=white
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins Options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EasyMotion_leader_key = '<Leader>'
@@ -233,6 +242,7 @@ nnoremap <f5> :GundoToggle<cr>
 nmap <Leader>x :BD<cr>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Loaded Banner
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 echo "################"
