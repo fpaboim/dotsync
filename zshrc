@@ -8,6 +8,7 @@ banner "${HOST}"
 # Oh-my-zsh!
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="af-magic"
+plugins=(git vi-mode rails3 ruby sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
@@ -26,13 +27,15 @@ export EDITOR="vim"
 bindkey -M viins ' ' magic-space
 bindkey -M viins '^f' vi-cmd-mode
 bindkey -M viins '\C-i' complete-word
+bindkey -M vicmd -s '^M' '\i^M'
+bindkey "^R" history-incremental-search-backward
 
 # Load RVM
 source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # aliases
-alias zshconfig="vim ~/.zshrc"
+alias zshrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshsource="source ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
@@ -46,11 +49,6 @@ if [[ "$TERM" == "xterm" ]]; then
       # No it isn't, it's gnome-terminal
       export TERM=xterm-256color
 fi
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
 
 # Customize to your needs...
 export PATH=./bin:/usr/local/heroku/bin:/home/fpaboim/.rvm/gems/ruby-1.9.3-p286/bin:/home/fpaboim/.rvm/gems/ruby-1.9.3-p286@global/bin:/home/fpaboim/.rvm/rubies/ruby-1.9.3-p286/bin:/home/fpaboim/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/fpaboim/.rvm/bin:/home/fpaboim/.rvm/bin
