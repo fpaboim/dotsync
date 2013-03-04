@@ -1,8 +1,8 @@
 # aliases
 if [[ "$TERM" == "cygwin" ]]; then
-  alias ll='ls -AlFh'
-  alias la='ls -FAh'
-  alias l='ls -1F'
+  alias ll='ls -AlFh --color'
+  alias la='ls -FAh --color'
+  alias l='ls -1F --color'
 else
   alias ll='ls -AlFh --group-directories-first'
   alias la='ls -FAh --group-directories-first'
