@@ -157,8 +157,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme darkspectrum
-highlight CursorLine cterm=bold term=bold
+colorscheme desertEx
 highlight Directory ctermfg=lightblue 
 highlight StatusLine ctermfg=lightblue ctermbg=darkred
 highlight LineNr ctermfg=lightgrey
