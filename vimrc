@@ -140,6 +140,7 @@ Bundle 'godlygeek/csapprox'
 Bundle 'godlygeek/tabular'
 Bundle 'Gundo'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'Shougo/neocomplcache'
@@ -147,6 +148,7 @@ Bundle 'vim-scripts/TabBar'
 Bundle 'vim-scripts/ScrollColors'
 Bundle 'vim-scripts/SearchComplete'
 Bundle 'vim-scripts/bufkill.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'xolox/vim-session'
 Bundle 'leafo/moonscript-vim'
 Bundle 'Colour-Sampler-Pack'
@@ -155,7 +157,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme Mustang
+colorscheme darkspectrum
 highlight CursorLine cterm=bold term=bold
 highlight Directory ctermfg=lightblue 
 highlight StatusLine ctermfg=lightblue ctermbg=darkred
@@ -182,6 +184,8 @@ nmap <Leader>a& :Tabularize /&<cr>
 vmap <Leader>a& :Tabularize /&<cr>
 nmap <Leader>a= :Tabularize /=<cr>
 vmap <Leader>a= :Tabularize /=<cr>
+nmap <c-a> :Tabularize /=<cr>
+vmap <c-a> :Tabularize /=<cr>
 nmap <Leader>a: :Tabularize /:<cr>
 vmap <Leader>a: :Tabularize /:<cr>
 nmap <Leader>a, :Tabularize /,<cr>
