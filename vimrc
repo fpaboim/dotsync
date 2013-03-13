@@ -157,7 +157,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme desertEx
+colorscheme Mustang
 highlight Directory ctermfg=lightblue 
 highlight StatusLine ctermfg=lightblue ctermbg=darkred
 highlight LineNr ctermfg=lightgrey
