@@ -1,3 +1,11 @@
+New machine automated setup
+===========================
+Installs a bunch of stuff on *ubuntu* machines, configures git, and then runs
+dotsync. If you're copying this remember to change the name and email on the
+git configuration settings and also ssh-keygen email. One line get and exec:
+
+    wget --no-check-certificate https://github.com/fpaboim/dotsync/raw/master/setup_ubuntu.sh -O - | sh
+
 dotsync
 =======
 

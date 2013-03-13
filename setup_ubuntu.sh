@@ -39,6 +39,10 @@ zsh
 
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
+# Setup Git
+git config --global user.name fpaboim
+git config --global user.email fr4n@hotmail.com
+
 # Dotsync setup
 if [ ! -d "~/.dotfiles" ]; then
   git clone https://github.com/fpaboim/dotsync.git .dotfiles/
@@ -58,6 +62,7 @@ if [ ! -d "~/.ssh" ]; then
   mkdir ~/.ssh/
 fi
 ssh-keygen -t rsa -C "fr4n@hotmail.com"
+ssh-add ~/.ssh/id_rsa.pub
 clip < ~/.ssh/id_rsa.pub
 echo "Key copied to clipboard, now paste it in github!"
 
