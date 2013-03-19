@@ -1,13 +1,12 @@
 # Welcome Screen
 clear
 uname -a
+figlet -ctf smslant "${HOST}"
 date
-hostname > temp
-banner "${HOST}"
 
 # Oh-my-zsh!
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="af-magic"
+ZSH_THEME="fpa-magic"
 plugins=(git vi-mode rails3 ruby sublime)
 source $ZSH/oh-my-zsh.sh
 
