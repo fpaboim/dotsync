@@ -1,6 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set mouse=a
 set nocompatible
 set smarttab
 set softtabstop=2
@@ -135,7 +136,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/powerline'
 Bundle 'kien/ctrlp.vim'
-Bundle 'L9'
 Bundle 'godlygeek/csapprox'
 Bundle 'godlygeek/tabular'
 Bundle 'Gundo'
@@ -143,14 +143,14 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'majutsushi/tagbar'
-Bundle 'Shougo/neocomplcache'
 Bundle 'vim-scripts/TabBar'
 Bundle 'vim-scripts/ScrollColors'
 Bundle 'vim-scripts/SearchComplete'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'xolox/vim-session'
 Bundle 'leafo/moonscript-vim'
+Bundle 'Shougo/neocomplete'
+Bundle 'Shougo/unite.vim'
 Bundle 'Colour-Sampler-Pack'
 filetype plugin indent on
 
@@ -198,47 +198,22 @@ let g:ctrlp_custom_ignore = {
 " Tagbar
 nnoremap <silent> <leader>tt :TagbarToggle<CR>
 " Neocomplcache
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_enable_auto_delimiter = 1
-let g:neocomplcache_max_list = 10
-let g:neocomplcache_min_syntax_length = 4
-let g:neocomplcache_min_keyword_length = 4
-let g:neocomplcache_force_overwrite_completefunc = 15
-let g:neocomplcache_auto_completion_start_length = 2
-let g:neocomplcache_enable_fuzzy_completion = 1
-let g:neocomplcache_fuzzy_completion_start_length = 4
+"
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()"\<CR>" : "\<CR>"
-inoremap <expr><CR> pumvisible() ? neocomplcache#close_popup() : "\<CR>"
 "imap <C-k> <Plug>(neosnippet_expand_or_jump)
 "smap <C-k> <Plug>(neosnippet_expand_or_jump)
-inoremap <expr><C-g> neocomplcache#undo_completion()
-inoremap <expr><C-l> neocomplcache#complete_common_string()
-"inoremap <expr><CR> neocomplcache#complete_common_string()
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.php = '[^.  \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplcache_omni_patterns.ruby = '[^.  *\t]\.\h\w*\|\h\w*::'
+
 " ColorScroll
-map <silent><f3> :PREVCOLOR<cr>
-map <silent><f4> :NEXTCOLOR<cr>
-map <silent><f4> :NEXTCOLOR<cr>
+map <silent><f7> :PREVCOLOR<cr>
+map <silent><f6> :NEXTCOLOR<cr>
 " Gundo
 nnoremap <f5> :GundoToggle<cr>
 " BuffKill
