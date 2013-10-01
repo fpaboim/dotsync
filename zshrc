@@ -10,6 +10,9 @@ ZSH_THEME="fpa-magic"
 plugins=(git vi-mode rails3 ruby sublime)
 source $ZSH/oh-my-zsh.sh
 
+#Caps fix
+sexkbmap -option ctrl:nocaps
+
 # Aliases
 source ~/.aliases
 
