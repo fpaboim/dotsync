@@ -7,7 +7,7 @@ date
 # Oh-my-zsh!
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="fpa-magic"
-plugins=(git vi-mode rails3 ruby sublime)
+plugins=(git vi-mode rails3 ruby bower per-directory-history npm sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
