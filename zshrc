@@ -30,6 +30,10 @@ bindkey -M viins ' ' magic-space
 bindkey -M viins '^f' vi-cmd-mode
 bindkey -M viins '\C-i' complete-word
 bindkey -M vicmd -s '^M' '\i^M'
+# bindkey -M vicmd '^k' up-line-or-search
+# bindkey -M vicmd '^j' down-line-or-search
+bindkey -M viins '^k' up-line-or-search
+bindkey -M viins '^j' down-line-or-search
 bindkey "^R" history-incremental-search-backward
 
 # Load RVM
