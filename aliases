@@ -9,9 +9,10 @@ else
   alias l='ls -1F --group-directories-first'
 fi
 
-alias subl='sublime-text&'
+alias subl='sublime-text &'
 alias dusz='du --max-depth=1|sort -n'
 alias dusz.='find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -sc | sort -n'
 alias lsfind='ls -R | grep  -i'
 alias dotsync='~/.dotfiles/bin/dotsync'
+alias dropboxrun='~/.dropbox-dist/dropboxd &'
 
