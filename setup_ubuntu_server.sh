@@ -44,15 +44,6 @@ fi
 git config --global user.name fpaboim
 git config --global user.email fr4n@hotmail.com
 
-# Dropbox Setup
-if [ ! -d ~/.dropbox-dist ]; then
-  echo "======================================================================"
-  echo "Installing Dropbox"
-  echo "======================================================================"
-  wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - 
-  ~/.dropbox-dist/dropboxd&
-fi
-
 # Dotsync setup
 if [ ! -d ~/.dotfiles ]; then
   echo "======================================================================"
@@ -65,6 +56,7 @@ else
   git pull
   cd .. 
  ~/.dotfiles/dotsync/bin/dotsync -u
+ cp ~/.dotfiles/fpa-magic.zsh-theme ~/.oh-my-zsh/themes/
 fi
 
 # Setup SSH
