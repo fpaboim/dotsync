@@ -127,6 +127,5 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="./bin:$PATH"
+export PATH="$PATH:./bin"
+export PATH=$PATH:~/llvm/build/Release+Asserts/bin

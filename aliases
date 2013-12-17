@@ -15,4 +15,6 @@ alias dusz.='find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -sc | sort -n'
 alias lsfind='ls -R | grep  -i'
 alias dotsync='~/.dotfiles/bin/dotsync'
 alias dropboxrun='~/.dropbox-dist/dropboxd &'
+alias sshfpnoip='ssh -i ~/.ssh/amazonsp.pem ubuntu@testmaster.no-ip.biz'
+alias sshfpnoipus='ssh -i ~/.ssh/amazonec2.pem ubuntu@fpaboim.no-ip.biz'
 

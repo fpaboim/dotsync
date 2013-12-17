@@ -143,6 +143,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'rstacruz/sparkup'
 Bundle 'vim-scripts/TabBar'
 Bundle 'vim-scripts/ScrollColors'
 Bundle 'vim-scripts/SearchComplete'
@@ -151,6 +152,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'leafo/moonscript-vim'
 Bundle 'Shougo/neocomplete'
 Bundle 'Shougo/unite.vim'
+Bundle 'gkz/vim-ls'
 Bundle 'Colour-Sampler-Pack'
 filetype plugin indent on
 
@@ -218,6 +220,9 @@ map <silent><f6> :NEXTCOLOR<cr>
 nnoremap <f5> :GundoToggle<cr>
 " BuffKill
 nmap <Leader>x :BD<cr>
+
+" Livescript tabs
+au BufNewFile,BufReadPost *.ls setl shiftwidth=2 expandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
