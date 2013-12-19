@@ -128,4 +128,4 @@ fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PATH="$PATH:./bin"
-export PATH=$PATH:~/llvm/build/Release+Asserts/bin
+export PATH=$PATH:~/Programming/libs/llvm/build/Release+Asserts/bin

@@ -17,4 +17,6 @@ alias dotsync='~/.dotfiles/bin/dotsync'
 alias dropboxrun='~/.dropbox-dist/dropboxd &'
 alias sshfpnoip='ssh -i ~/.ssh/amazonsp.pem ubuntu@testmaster.no-ip.biz'
 alias sshfpnoipus='ssh -i ~/.ssh/amazonec2.pem ubuntu@fpaboim.no-ip.biz'
+alias meteordump='mongodump -h 127.0.0.1 --port 3002 -d meteor'
+alias meteordumprestore='mongoimport -h 127.0.0.1 --port 3002 -d meteor'
 
