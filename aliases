@@ -18,5 +18,25 @@ alias dropboxrun='~/.dropbox-dist/dropboxd &'
 alias sshfpnoip='ssh -i ~/.ssh/amazonsp.pem ubuntu@testmaster.no-ip.biz'
 alias sshfpnoipus='ssh -i ~/.ssh/amazonec2.pem ubuntu@fpaboim.no-ip.biz'
 alias meteordump='mongodump -h 127.0.0.1 --port 3002 -d meteor'
-alias meteordumprestore='mongoimport -h 127.0.0.1 --port 3002 -d meteor'
+alias meteordumprestore='mongorestore -h 127.0.0.1 --port 3002 -d meteor'
 
+#Determin if pygmentize is installed
+isinstalledpyg=$(which pygmentize)
+if [ $? = 0 ]; then
+  somevar='true'
+  #colored cat
+  alias pcat='pygmentize'
+else 
+  echo "pygmentize is not installed"
+  echo "on ubuntu/debian do sudo apt-get install python-pygments/apt-get install python-pygments"
+  echo "on fedora/redhat do yum install python-pygments"
+  echo "on OSX Lion do sudo easy_install Pygments"
+fi
+#colored less
+function pless() {
+  pcat "$1" | less -R
+}
+#colored diff
+function pdiff() {
+  diff -u "$1" "$2" | pygmentize -l diff
+}

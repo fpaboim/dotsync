@@ -14,7 +14,14 @@ source $ZSH/oh-my-zsh.sh
 setxkbmap -option ctrl:nocaps
 
 # Aliases
-source ~/.aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+# Local Configurations which are not synced
+if [ -f ~/.localconfig ]; then
+    . ~/.localconfig
+fi
 
 # Ctrl-s save fix
 setopt NO_FLOW_CONTROL
@@ -56,9 +63,9 @@ if [[ "$TERM" == "xterm" ]]; then
       export TERM=xterm-256color
 fi
 
-# Customize to your needs...
-export PATH=./bin:/usr/local/heroku/bin:/home/fpaboim/.rvm/gems/ruby-1.9.3-p286/bin:/home/fpaboim/.rvm/gems/ruby-1.9.3-p286@global/bin:/home/fpaboim/.rvm/rubies/ruby-1.9.3-p286/bin:/home/fpaboim/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/fpaboim/.rvm/bin:/home/fpaboim/.rvm/bin
+export PATH="$PATH:./bin"
+export PATH=$PATH:~/Programming/libs/llvm/build/Release+Asserts/bin
+export PATH=$PATH:~/Programming/libs/emscripten
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="./bin:$PATH"

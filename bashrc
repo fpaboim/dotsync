@@ -23,7 +23,7 @@ fi
 
 # Local Configurations which are not synced
 if [ -f ~/.localconfig ]; then
-    . ~/localconfig
+    . ~/.localconfig
 fi
 
 # Editor
@@ -125,7 +125,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export PATH="$PATH:./bin"
 export PATH=$PATH:~/Programming/libs/llvm/build/Release+Asserts/bin
+export PATH=$PATH:~/Programming/libs/emscripten

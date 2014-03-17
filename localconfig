@@ -1,0 +1,2 @@
+alias awssp='ssh -i ~/.ssh/amazonsp.pem ubuntu@testmaster.no-ip.biz'
+
